@@ -1,9 +1,10 @@
-user_pref("network.cookie.lifetimePolicy", 2);
+user_pref("network.cookie.lifetimePolicy", 0);
 user_pref("network.cookie.lifetime.days", 5);
 user_pref("privacy.clearOnShutdown.cookies", false);
 user_pref("privacy.sanitize.sanitizeOnShutdown", false);
+user_pref("privacy.clearOnShutdown.sessions", false);
 user_pref("network.cookie.cookieBehavior", 1);
-user_pref("network.cookie.thirdparty.sessionOnly", true);
+user_pref("network.cookie.thirdparty.sessionOnly", false);
 
 user_pref("identity.fxaccounts.enabled", false);
 user_pref("privacy.firstparty.isolate", true);

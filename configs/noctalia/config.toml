@@ -84,9 +84,9 @@ capsule = true
 capsule_radius = 6.0
 capsule_opacity = 0.5
 
-start = ["media"]
-center = ["workspaces", "active_window", "sysmon"]
-end = ["tray", "notifications", "network", "bluetooth", "battery", "volume", "brightness", "nightlight", "clock", "control-center"]
+start = ["distro-launcher", "media"]
+center = ["workspaces", "active_window"]
+end = ["tray", "sysmon", "notifications", "network", "bluetooth", "battery", "volume", "brightness", "nightlight", "clock", "control-center"]
 
 [plugins]
 enabled = ["noctalia/bongocat", "noctalia/timer"]
@@ -102,6 +102,16 @@ name = "community"
 kind = "git"
 location = "https://github.com/noctalia-dev/community-plugins"
 enabled = true
+
+[widget.distro-launcher]
+type = "custom_button"
+glyph = ""
+tooltip = "Launch"
+command = "bemenu-run"
+right_command = ""
+middle_command = ""
+scroll_up_command = ""
+scroll_down_command = ""
 
 [widget.workspaces]
 display_mode = "id"

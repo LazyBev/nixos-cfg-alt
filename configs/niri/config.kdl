@@ -151,7 +151,7 @@ binds {
     Alt+Shift+S      { spawn "steam"; }
     Alt+V            { spawn "alacritty" "-e" "btop"; }
     Alt+Shift+V      { spawn "vesktop"; }
-    Alt+D            { spawn "fuzzel"; }
+    Alt+D            { spawn "bemenu-run"; }
     Alt+Y            { spawn "waypaper"; }
 
     Mod+Shift+L      { spawn "gtklock" "-s" "/home/yari/.config/gtklock/style.css" "-b" "/home/yari/Pictures/matikanefuku.png"; }
