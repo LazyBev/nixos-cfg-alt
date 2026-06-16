@@ -146,6 +146,9 @@ show_label = false
 [widget.active_window]
 type = "active_window"
 display = "icon_only"
+icon_size = 20
+min_length = 0
+max_length = 24
 
 [widget.sysmon]
 type = "sysmon"
