@@ -105,7 +105,7 @@ enabled = true
 
 [widget.distro-launcher]
 type = "custom_button"
-glyph = ""
+custom_image = "~/.config/noctalia/nixos-logo.png"
 tooltip = "Launch"
 command = "bemenu-run"
 right_command = ""
