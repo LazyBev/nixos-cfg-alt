@@ -166,6 +166,8 @@ c.content.blocking.adblock.lists = [
 ]
 c.content.headers.user_agent = "Mozilla/5.0 (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0"
 c.content.headers.accept_language = "en-US,en;q=0.9"
+c.content.headers.do_not_track = True
+c.content.webrtc_ip_handling_policy = "disable-non-proxied-udp"
 
 # =============================================================================
 # Zoom
