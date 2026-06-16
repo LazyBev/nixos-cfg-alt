@@ -1,84 +1,70 @@
 {
     "layer": "top",
-    "modules-left": ["custom/logo", "niri/workspaces", "group/media", "custom/visualizer"],
+    "position": "top",
+    "height": 32,
+    "spacing": 4,
+    "modules-left": ["niri/workspaces", "custom/logo", "window"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "tray", "battery", "cpu", "memory"],
-    "battery": {
-        "interval": 60,
-        "format": "{capacity}% {icon}",
-        "format-icons": {
-            "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-            "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+    "modules-right": ["network", "pulseaudio", "cpu", "memory", "tray"],
+    "niri/workspaces": {
+        "format": "{name}",
+        "all-outputs": true
+    },
+    "window": {
+        "format": "{}",
+        "max-length": 50,
+        "separator": false
+    },
+    "clock": {
+        "format": "{:%a %b %d  %I:%M %p}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "format": {
+                "today": "<span color='#bd93f9'><b>{}</b></span>"
+            }
         },
+        "interval": 30
     },
     "cpu": {
-        "interval": 10,
-        "format": " {}%",
+        "interval": 5,
+        "format": " {usage}%",
         "max-length": 10,
-        "on-click": "alacritty -e btop"
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
     },
     "memory": {
-        "interval": 30,
+        "interval": 10,
         "format": " {percentage}%",
-        "tooltip-format": "{used:0.1f}G/{total:0.1f}G used",
-        "on-click": "alacritty -e btop",
-    },
-
-    "clock": {
-      "format": "󰥔 {:%a, %d. %b %I:%M %p}",
-      "tooltip-format": "<tt><small>{calendar}</small></tt>",
-      "calendar": {
-        "format": {
-          "today": "<span color='#75f1fa'><b>{}</b></span>"
+        "states": {
+            "warning": 70,
+            "critical": 90
         }
-      }
+    },
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": " {ipaddr}",
+        "format-disconnected": " Disconnected",
+        "interval": 10,
+        "tooltip-format": "{ifname} via {gwaddr}"
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-muted": "",
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
         "format-icons": {
             "default": ["", ""]
         },
-        "scroll-step": 1,
-        "ignored-sinks": ["Easy Effects Sink"],
         "on-click": "pavucontrol",
-    },
-
-    "group/media": {
-      "orientation": "horizontal",
-      "modules": [
-        "custom/media-now-playing",
-        "custom/media-time"
-      ]
-    },
-    "custom/media-now-playing": {
-      "exec": "~/.config/waybar/custom_modules/media/media-now-playing.sh",
-      "escape": true,
-      "interval": 3,
-      "tooltip": false,
-      "on-click": "playerctl play-pause",
-      "on-click-middle": "playerctl previous",
-      "on-click-right": "playerctl next",
-    },
-    "custom/media-time": {
-      "exec": "~/.config/waybar/custom_modules/media/media-time.sh",
-      "escape": true,
-      "interval": 1,
-      "tooltip": false,
-      "on-click": "playerctl play-pause",
-    },
-    "custom/visualizer": {
-      "exec": "~/.config/waybar/custom_modules/cava/visualizer.sh",
-      "tooltip": false,
-      "on-click": "playerctl play-pause",
-    },
-    "custom/logo": {
-      "exec": "~/.config/waybar/custom_modules/logo.sh",
-      "interval": 86400,
-      "tooltip": false
+        "scroll-step": 5
     },
     "tray": {
-      "icon-size": 16,
-      "spacing": 8
+        "icon-size": 18,
+        "spacing": 8
+    },
+    "custom/logo": {
+        "exec": "~/.config/waybar/custom_modules/logo.sh",
+        "interval": 86400,
+        "tooltip": false
     }
 }
