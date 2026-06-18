@@ -7,10 +7,13 @@ user_pref("network.cookie.cookieBehavior", 1);
 user_pref("network.cookie.thirdparty.sessionOnly", false);
 
 user_pref("identity.fxaccounts.enabled", false);
-user_pref("privacy.firstparty.isolate", true);
+// user_pref("privacy.firstparty.isolate", true);
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
-user_pref("privacy.donottrackheader.enabled", true);
+user_pref("privacy.donottrackheader.enabled", false);
+user_pref("layout.css.font-visibility.level", 1);
+user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.trackingprotection.fingerprinting.enabled", true);
 user_pref("privacy.globalprivacycontrol.enabled", true);
 
 user_pref("webgl.disabled", true);

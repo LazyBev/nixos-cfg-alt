@@ -30,14 +30,14 @@ layout {
     default-column-width { proportion 1.0; }
 
     focus-ring {
-        width 2
+        width 1
         active-color "#bd93f9"
         inactive-color "#44475a"
     }
 
     border {
         on
-        width 2
+        width 1
         active-color "#bd93f9"
         inactive-color "#44475a"
     }
@@ -61,11 +61,6 @@ workspace "6"
 workspace "7"
 workspace "8"
 workspace "9"
-
-window-rule {
-    geometry-corner-radius 8
-    clip-to-geometry true
-}
 
 window-rule {
     match app-id="zen$" title="^Picture-in-Picture$"
@@ -146,7 +141,9 @@ binds {
     Alt+T            { spawn "alacritty" "-e" "yazi"; }
     Alt+Shift+T      { spawn "thunar"; }
     Alt+E            { spawn "alacritty" "-e" "nvim"; }
-    Alt+Shift+E      { spawn "vscodium"; }
+    Alt+Shift+E      { spawn "codium"; }
+    Alt+Ctrl+B       { spawn "/home/yari/.local/bin/beverage-shell" "pour"; }
+    Alt+Ctrl+Shift+B { spawn "/home/yari/.local/bin/beverage-shell" "stop"; }
     Alt+S            { spawn "alacritty" "-e" "rmpc"; }
     Alt+Shift+S      { spawn "steam"; }
     Alt+V            { spawn "alacritty" "-e" "btop"; }
