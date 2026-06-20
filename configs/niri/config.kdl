@@ -127,7 +127,6 @@ environment {
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "dunst"
-spawn-at-startup "noctalia"
 spawn-at-startup "bash" "-lc" "sleep 1 && nm-applet --indicator"
 spawn-at-startup "bash" "-lc" "swaybg -i ~/Pictures/matikanefuku.png"
 
