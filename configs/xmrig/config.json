@@ -4,10 +4,10 @@
         "worker-id": null
     },
     "http": {
-        "enabled": false,
+        "enabled": true,
         "host": "127.0.0.1",
-        "port": 0,
-        "access-token": null,
+        "port": 8088,
+        "access-token": "monero",
         "restricted": true
     },
     "autosave": true,
