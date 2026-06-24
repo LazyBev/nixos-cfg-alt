@@ -9,7 +9,10 @@
       pull.rebase = true;
       push.autoSetupRemote = true;
       core.editor = "nvim";
-      safe.directory = "/home/medusa/nixos-cfg";
+      safe.directory = [
+        "/home/medusa/nixos-cfg"
+        "/home/medusa/nixos-cfg-alt"
+      ];
     };
   };
 }
