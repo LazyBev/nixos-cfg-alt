@@ -127,6 +127,7 @@ environment {
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "dunst"
+spawn-at-startup "/usr/local/bin/ribbon"
 spawn-at-startup "bash" "-lc" "sleep 1 && nm-applet --indicator"
 spawn-at-startup "bash" "-lc" "swaybg -i ~/Pictures/matikanefuku.png"
 
@@ -153,6 +154,8 @@ binds {
     Mod+Shift+L      { spawn "gtklock" "-s" "/home/yari/.config/gtklock/style.css" "-b" "/home/yari/Pictures/matikanefuku.png"; }
     Alt+Ctrl+P       { spawn "doas" "reboot"; }
     Alt+Shift+P      { spawn "doas" "poweroff"; }
+    Alt+U            { spawn "/usr/local/bin/ribbon"; }
+    Alt+Shift+U      { spawn "/usr/local/bin/ribbon" "kill"; }
     Alt+Shift+Backspace { quit; }
 
     Alt+X            { screenshot; }
@@ -221,4 +224,7 @@ binds {
     Alt+Ctrl+Space       { spawn "playerctl" "play-pause"; }
     Alt+Ctrl+L           { spawn "playerctl" "next"; }
     Alt+Ctrl+H           { spawn "playerctl" "previous"; }
+
+    XF86MonBrightnessUp   { spawn "brightnessctl" "set" "10%+"; }
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "10%-"; }
 }
