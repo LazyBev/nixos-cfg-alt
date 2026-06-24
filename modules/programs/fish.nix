@@ -41,7 +41,7 @@
       function sysupd
         if test (count $argv) -lt 2
           echo "Usage: sysupd <config-dir> <hostname>"
-          echo "Example: sysupd nixos-cfg gentuwu"
+          echo "Example: sysupd nixos-cfg yggdrasil"
           return 1
         end
         pushd ~/$argv[1]
@@ -53,7 +53,7 @@
       function update
         if test (count $argv) -lt 2
           echo "Usage: update <config-dir> <hostname>"
-          echo "Example: update nixos-cfg gentuwu"
+          echo "Example: update nixos-cfg yggdrasil"
           return 1
         end
         nh os switch $HOME/$argv[1]#$argv[2]
@@ -75,21 +75,6 @@
         doas nix-collect-garbage -d
         doas nix-collect-garbage --delete-old
         nix store optimise
-      end
-
-      function dev
-        if test (count $argv) -lt 2
-          echo "Usage: dev <config-dir> <language>"
-          echo "Example: dev nixos-cfg rust"
-          return 1
-        end
-        set dir ~/$argv[1]/devenvs/$argv[2]
-        if not test -d "$dir"
-          echo "Unknown devenv: $argv[2] in ~/$argv[1]/devenvs/"
-          return 1
-        end
-        cd "$dir"
-        devenv shell
       end
     '';
     shellAliases = {

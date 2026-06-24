@@ -16,57 +16,38 @@
       (ffa { name = "tabliss"; url = "https://addons.mozilla.org/firefox/downloads/file/3940751/tabliss-2.6.0.xpi"; sha256 = "de766810f234b1c13ffdb7047ae6cbf06ed79c3d08b51a07e4766fadff089c0f"; })
     ];
   };
-
-  librewolf-i2p = pkgs.writeShellScriptBin "librewolf-i2p" ''
-    exec ${pkgs.librewolf}/bin/librewolf --profile /home/yari/.config/librewolf/librewolf/nhjvl52u.i2p --no-remote "$@"
-  '';
 in {
-  hjem.users.yari.packages = with pkgs; [
+  hjem.users.medusa.packages = with pkgs; [
     alacritty
     btop
     bitwarden-desktop
-    bemenu
+    fuzzel
     dunst
     waypaper
     mpv
     pavucontrol
     playerctl
-    qutebrowser
-    quickshell
     librewolf-wrapped
-    librewolf-i2p
-    lua
-    gajim
-    signal-desktop
-    rmpc
     thunar
     vesktop
     vscodium
-    yazi
-    zellij
     networkmanagerapplet
     bat
     fzf
     gcc
-    gh
-    ghc
-    go
+
 
     just
     tree
     zoxide
-    cargo
     catppuccin-cursors
 
-    devenv
     eza
     gtklock
     imv
 
-    ocaml
-    odin
+
     ripgrep
-    rustc
     swaybg
     unar
     unzip
@@ -76,35 +57,21 @@ in {
     gnugrep
     which
     zathura
-    zig
 
-    opencode
     keepassxc
     proton-vpn
-    proton-vpn-cli
-    protonmail-desktop
-    gpu-screen-recorder
-
-    monero-cli
-    monero-gui
-    xmrig
-    motrix
-    qbittorrent
-    tor
-    tor-browser
     xwayland-satellite
     ucspi-tcp
     inotify-tools
-    android-tools
     brightnessctl
     pastel
-    rsync
     dysk
     astroterm
     caligula
     impala-nm
     inputs.ribbon.packages.${pkgs.stdenv.hostPlatform.system}.default
     usbutils
+    libnotify
   ];
 }
 

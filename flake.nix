@@ -1,5 +1,5 @@
 {
-  description = "gentuwu's NixOS configuration";
+  description = "yggdrasil's NixOS configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -11,10 +11,6 @@
     };
     hjem = {
       url = "github:feel-co/hjem";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nvf = {
-      url = "github:notashelf/neovim-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak = {
@@ -46,48 +42,19 @@
         };
 
         hosts = {
-          gentuwu = {
+          yggdrasil = {
             arch = "x86_64";
             class = "nixos";
             deployable = true;
             modules = [
-              ./hosts/gentuwu.nix
+              ./hosts/yggdrasil.nix
               { _module.args = { inherit inputs; inherit (inputs) omnisearch; }; }
               inputs.niri-nix.nixosModules.default
               inputs.hjem.nixosModules.default
-              inputs.nvf.nixosModules.default
               inputs.nix-flatpak.nixosModules.nix-flatpak
               inputs.omnisearch.nixosModules.default
               ./modules
             ];
-          };
-
-          worker-vic = {
-            arch = "x86_64";
-            class = "nixos";
-            deployable = true;
-            modules = [ ./hosts/worker-vic.nix ];
-          };
-
-          worker-opti = {
-            arch = "x86_64";
-            class = "nixos";
-            deployable = true;
-            modules = [ ./hosts/worker-opti.nix ];
-          };
-
-          secbox = {
-            arch = "x86_64";
-            class = "nixos";
-            deployable = true;
-            modules = [ ./hosts/secbox.nix ];
-          };
-
-          secbox-laptop = {
-            arch = "x86_64";
-            class = "nixos";
-            deployable = true;
-            modules = [ ./hosts/secbox-laptop.nix ];
           };
         };
       };

@@ -1,11 +1,12 @@
 { pkgs, ... }: {
-  hjem.users.yari.files = {
+  hjem.users.medusa.files = {
     ".config/niri/config.kdl".source = ../../configs/niri/config.kdl;
     ".config/ribbon/config.rib".source = ../../configs/ribbon/config.rib;
 
 
     ".config/alacritty/alacritty.toml".source = ../../configs/alacritty/alacritty.toml;
     ".config/dunst/dunstrc".source = ../../configs/dunst/dunstrc;
+    ".config/fuzzel/fuzzel.ini".source = ../../configs/fuzzel/fuzzel.ini;
     ".config/fcitx5/config".source = ../../configs/fcitx5/config;
     ".config/fcitx5/profile".source = ../../configs/fcitx5/profile;
     ".config/fcitx5/conf/chttrans.conf".source = ../../configs/fcitx5/conf/chttrans.conf;
@@ -16,14 +17,8 @@
     ".config/librewolf/librewolf/rlubfwj2.default/chrome/userChrome.css".source = ../../configs/librewolf/userChrome.css;
     ".config/librewolf/sidebery-sidebar.css".source = ../../configs/librewolf/sidebery-sidebar.css;
     ".config/librewolf/librewolf/rlubfwj2.default/user.js".source = ../../configs/librewolf/user.js;
-    ".config/qutebrowser/config.py".source = ../../configs/qutebrowser/config.py;
-    ".config/qutebrowser/styles/youtube.css".source = ../../configs/qutebrowser/styles/youtube.css;
-    ".config/rmpc/config.ron".source = ../../configs/rmpc/config.ron;
     ".config/vesktop/settings.json".source = ../../configs/vesktop/vencord-settings.json;
-    ".config/yazi/yazi.toml".source = ../../configs/yazi/yazi.toml;
-    ".config/yazi/keymap.toml".source = ../../configs/yazi/keymap.toml;
-    ".config/yazi/theme.toml".source = ../../configs/yazi/theme.toml;
-    ".config/zellij/config.kdl".source = ../../configs/zellij/config.kdl;
+
     ".config/bat/config".text = "--theme=ansi";
     ".config/gtk-3.0/settings.ini".text = ''
       [Settings]
@@ -70,19 +65,9 @@
       theme=Dracula
     '';
     ".config/dunst/icons".source = ../../configs/dunst/icons;
-    ".config/yazi/flavors/dracula.yazi/flavor.toml".source = ../../configs/yazi/flavors/dracula.yazi/flavor.toml;
-    ".config/yazi/flavors/dracula.yazi/tmtheme.xml".source = ../../configs/yazi/flavors/dracula.yazi/tmtheme.xml;
 
-    "Pictures/BURBER.png".source = ../../configs/Pictures/BURBER.png;
-    "Pictures/YELLOW_BURBER.png".source = ../../configs/Pictures/YELLOW_BURBER.png;
-    "Pictures/diinki.png".source = ../../configs/Pictures/diinki.png;
-    "Pictures/higuruma.jpg".source = ../../configs/Pictures/higuruma.jpg;
-    "Pictures/jodio.jpg".source = ../../configs/Pictures/jodio.jpg;
-    "Pictures/manhattan.jpg".source = ../../configs/Pictures/manhattan.jpg;
-    "Pictures/manhattan2.jpg".source = ../../configs/Pictures/manhattan2.jpg;
-    "Pictures/matikanefuku.png".source = ../../configs/Pictures/matikanefuku.png;
+    "Pictures/agnes.png".source = ../../configs/Pictures/agnes.png;
     "Pictures/todo.png".source = ../../configs/Pictures/todo.png;
-    "Pictures/yellow_burber_wall1.png".source = ../../configs/Pictures/yellow_burber_wall1.png;
 
     ".config/librewolf/librewolf/profiles.ini".text = ''
       [Profile0]
@@ -91,16 +76,10 @@
       Path=rlubfwj2.default
       Default=1
 
-      [Profile1]
-      Name=i2p
-      IsRelative=1
-      Path=nhjvl52u.i2p
-
       [General]
       StartWithLastProfile=1
       Version=2
     '';
 
-    ".config/librewolf/librewolf/nhjvl52u.i2p/user.js".source = ../../configs/librewolf/i2p-user.js;
   };
 }

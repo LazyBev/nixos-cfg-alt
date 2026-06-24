@@ -32,5 +32,5 @@
     };
   };
 in {
-  hjem.users.yari.packages = [ ioccc-top ];
+  hjem.users.medusa.packages = [ ioccc-top ];
 }

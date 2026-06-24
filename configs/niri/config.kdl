@@ -63,11 +63,6 @@ workspace "8"
 workspace "9"
 
 window-rule {
-    match app-id="zen$" title="^Picture-in-Picture$"
-    open-floating true
-}
-
-window-rule {
     match title="^Picture-in-Picture$"
     open-floating true
 }
@@ -129,30 +124,22 @@ spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "dunst"
 spawn-at-startup "ribbon"
 spawn-at-startup "bash" "-lc" "sleep 1 && nm-applet --indicator"
-spawn-at-startup "bash" "-lc" "swaybg -i ~/Pictures/matikanefuku.png"
+spawn-at-startup "bash" "-lc" "swaybg -i ~/Pictures/agnes.png"
 
 binds {
     Alt+Shift+Slash { show-hotkey-overlay; }
 
     Alt+Return       { spawn "alacritty"; }
-    Alt+Shift+Return { spawn "alacritty" "-e" "zellij"; }
-    Alt+B            { spawn "qutebrowser"; }
-    Alt+Shift+B      { spawn "librewolf"; }
-    Alt+T            { spawn "alacritty" "-e" "yazi"; }
-    Alt+Shift+T      { spawn "thunar"; }
-    Alt+E            { spawn "alacritty" "-e" "nvim"; }
-    Alt+Shift+E      { spawn "codium"; }
-    Alt+Ctrl+B       { spawn "/home/yari/.local/bin/beverage-shell" "pour"; }
-    Alt+Ctrl+Shift+B { spawn "/home/yari/.local/bin/beverage-shell" "stop"; }
-    Alt+S            { spawn "alacritty" "-e" "rmpc"; }
-    Alt+Shift+S      { spawn "steam"; }
+    Alt+B            { spawn "librewolf"; }
+    Alt+T            { spawn "thunar"; }
+    Alt+S      { spawn "steam"; }
     Alt+V            { spawn "alacritty" "-e" "btop"; }
     Alt+Shift+V      { spawn "vesktop"; }
-    Alt+D            { spawn "bemenu-run"; }
+    Alt+D            { spawn "fuzzel"; }
     Alt+Y            { spawn "waypaper"; }
     Alt+Z            { spawn "alacritty" "-e" "impala-nm"; }
 
-    Mod+Shift+L      { spawn "gtklock" "-s" "/home/yari/.config/gtklock/style.css" "-b" "/home/yari/Pictures/matikanefuku.png"; }
+    Mod+Shift+L      { spawn "gtklock" "-s" "/home/medusa/.config/gtklock/style.css" "-b" "/home/medusa/Pictures/agnes.png"; }
     Mod+Shift+P      { spawn "shutdown" "now"; }
     Mod+Ctrl+P       { spawn "reboot"; }
     Alt+U            { spawn "ribbon"; }
@@ -222,9 +209,6 @@ binds {
     XF86AudioPlay        { spawn "playerctl" "play-pause"; }
     XF86AudioNext        { spawn "playerctl" "next"; }
     XF86AudioPrev        { spawn "playerctl" "previous"; }
-    Alt+Ctrl+Space       { spawn "playerctl" "play-pause"; }
-    Alt+Ctrl+L           { spawn "playerctl" "next"; }
-    Alt+Ctrl+H           { spawn "playerctl" "previous"; }
 
     XF86MonBrightnessUp   { spawn "brightnessctl" "set" "10%+"; }
     XF86MonBrightnessDown { spawn "brightnessctl" "set" "10%-"; }

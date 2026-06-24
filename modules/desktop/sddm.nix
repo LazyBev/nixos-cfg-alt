@@ -2,6 +2,7 @@
   services.greetd.enable = false;
 
   services.xserver.enable = true;
+  services.xserver.desktopManager.cinnamon.enable = true;
   services.libinput.enable = true;
 
   services.displayManager.sddm = {

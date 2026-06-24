@@ -1,8 +1,8 @@
 { config, lib, ... }: let
   inherit (lib) types mkOption mkIf;
-  cfg = config.gentuwu.powerProfiles;
+  cfg = config.yggdrasil.powerProfiles;
 in {
-  options.gentuwu.powerProfiles.default = mkOption {
+  options.yggdrasil.powerProfiles.default = mkOption {
     type = types.nullOr (types.enum [ "performance" "balanced" "power-saver" ]);
     default = "balanced";
     description = "Default power profile";

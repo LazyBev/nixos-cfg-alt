@@ -2,7 +2,7 @@
   options.vars = {
     name = lib.mkOption {
       type = lib.types.str;
-      default = "yari";
+      default = "medusa";
       description = "Short name/alias";
     };
     username = lib.mkOption {
@@ -12,12 +12,12 @@
     };
     email = lib.mkOption {
       type = lib.types.str;
-      default = "lazy25yari@proton.me";
+      default = "medusa@ari.lt";
       description = "Email address";
     };
     hostname = lib.mkOption {
       type = lib.types.str;
-      default = "gentuwu";
+      default = "yggdrasil";
       description = "System hostname";
     };
     theme = lib.mkOption {
@@ -47,7 +47,7 @@
     };
     flakeDir = lib.mkOption {
       type = lib.types.str;
-      default = "/home/yari/nix";
+      default = "/home/medusa/nix";
       description = "Path to flake directory";
     };
     maxJobs = lib.mkOption {

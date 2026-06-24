@@ -3,5 +3,5 @@
   virtualisation.spiceUSBRedirection.enable = true;
   programs.virt-manager.enable = true;
 
-  users.users.yari.extraGroups = [ "kvm" "libvirtd" ];
+  users.users.medusa.extraGroups = [ "kvm" "libvirtd" ];
 }

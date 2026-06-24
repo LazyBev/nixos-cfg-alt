@@ -3,13 +3,13 @@
     enable = true;
     lfs.enable = true;
     config = {
-      user.name = "yari";
-      user.email = "yari@ari.lt";
+      user.name = "medusa";
+      user.email = "medusa@ari.lt";
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
       core.editor = "nvim";
-      safe.directory = "/home/yari/nixos-cfg";
+      safe.directory = "/home/medusa/nixos-cfg";
     };
   };
 }

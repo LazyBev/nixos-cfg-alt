@@ -17,5 +17,5 @@
     meta.mainProgram = "fetch";
   };
 in {
-  hjem.users.yari.packages = [ fetch ];
+  hjem.users.medusa.packages = [ fetch ];
 }

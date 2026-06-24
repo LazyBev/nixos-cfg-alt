@@ -44,18 +44,6 @@ install host:
 	  --flake .#{{host}} && \
 	nixos-install --root /mnt --max-jobs 4 --flake .#{{host}}
 
-devenv-shell:
-	devenv shell
-
-devenv-test:
-	devenv test
-
-devenv-update:
-	devenv update
-
-devenv-gc:
-	devenv gc
-
 search query:
 	nix search nixpkgs {{query}}
 
