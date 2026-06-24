@@ -150,7 +150,7 @@ binds {
     Alt+Shift+V      { spawn "vesktop"; }
     Alt+D            { spawn "bemenu-run"; }
     Alt+Y            { spawn "waypaper"; }
-    Alt+Z            { spawn "impala-nm"; }
+    Alt+Z            { spawn "alacritty" "-e" "impala-nm"; }
 
     Mod+Shift+L      { spawn "gtklock" "-s" "/home/yari/.config/gtklock/style.css" "-b" "/home/yari/Pictures/matikanefuku.png"; }
     Mod+Shift+P      { spawn "shutdown" "now"; }

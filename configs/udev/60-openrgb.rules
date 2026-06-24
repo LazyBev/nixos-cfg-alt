@@ -463,6 +463,7 @@ SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="652f", TAG
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="8520", TAG+="uaccess", TAG+="EVision_Keyboard_0C458520"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="320f", ATTRS{idProduct}=="502a", TAG+="uaccess", TAG+="EVision_Keyboard_320F502A"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="7698", TAG+="uaccess", TAG+="EVision_Keyboard_0C457698"
+SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="320f", ATTRS{idProduct}=="505b", TAG+="uaccess", TAG+="EVision_Keyboard_320F505B"
 SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="320f", ATTRS{idProduct}=="5064", TAG+="uaccess", TAG+="EVision_Keyboard_320F5064"
 #---------------------------------------------------------------#
 # Epomaker TH80 Pro - EpomakerControllerDetect
